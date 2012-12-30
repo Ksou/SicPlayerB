@@ -1,0 +1,4 @@
+This is a very basic SoundCloud song player . 
+The way this app works is first , we create a HTTP client, assign it as a var , and with this var we run a .open function with the arguments  ('GET', and the request URL  ) . Then we run a send function . Incase we have any problems with our request we have an .onerror function that displays an alert saying we can't establish a connection . 
+
+After that 

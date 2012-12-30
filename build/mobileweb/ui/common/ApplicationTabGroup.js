@@ -1,9 +1,5 @@
 // I have to declare these vars globally since I act on them 
-// later , now their are better ways to do this 
-// but ...
-// THIS IS FUNCTIONAL , but 
-
-//var old ;
+// later , 
 
 //var win2 ;
 //var RawJson ;
@@ -23,7 +19,7 @@ function ApplicationTabGroup(Window) {
 	var JsonProper =  Templates('SCView');
 	labelData = Templates('Label');
 	labelData.text = ' Waiting for Data ';
-	JSONTe = Templates('Label');
+var	JSONTe = Templates('Label');
 	var viewContainer = Templates('SCview');
 	var selfd = Ti.UI.createTabGroup();
 

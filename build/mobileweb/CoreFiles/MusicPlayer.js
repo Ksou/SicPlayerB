@@ -18,8 +18,8 @@ function MusicPlayer (Song,SongMeta){
    // buttonNames: ['Artist_Page', 'Close', 'Pause'],
    // I can't stop the dialog from going away when a button is pressed
    // So instead
-     buttonNames: ['Artist_Page', 'Close'],
-    message: 'By'+ SongMeta.user.username ,
+     buttonNames: ['Artist Page', 'Close'],
+    message: 'By : '+ SongMeta.user.username ,
     title: SongMeta.title 
   });
 //  SongInfo.setPersistent(true);

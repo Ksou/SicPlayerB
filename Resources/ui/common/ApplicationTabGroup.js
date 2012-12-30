@@ -19,7 +19,7 @@ function ApplicationTabGroup(Window) {
 	var JsonProper =  Templates('SCView');
 	labelData = Templates('Label');
 	labelData.text = ' Waiting for Data ';
-	JSONTe = Templates('Label');
+var	JSONTe = Templates('Label');
 	var viewContainer = Templates('SCview');
 	var selfd = Ti.UI.createTabGroup();
 

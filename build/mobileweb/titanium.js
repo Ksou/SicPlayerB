@@ -13,7 +13,7 @@ var require = {
 		name: "SicPlayerB",
 		names: {},
 		publisher: "keith",
-		url: "http://",
+		url: "http://beatquestgame.com/",
 		version: "1"
 	},
 	has: {

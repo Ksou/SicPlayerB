@@ -1,4 +1,3 @@
-
 function ApplicationTabGroup(Window) {
 	// what Templates does is return a nicely formated UI element 
 
@@ -38,7 +37,7 @@ var		win2 = new Window(L('Tech Info'));
 		window: RawJson
 	});
 		
-	var better = Ti.UI.createScrollableView();
+//	var better = Ti.UI.createScrollableView();
 	
 	win2.containingTab = tab2;
 	RawJson.containingTab = tab3 ;

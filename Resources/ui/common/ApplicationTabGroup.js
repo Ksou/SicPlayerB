@@ -1,29 +1,20 @@
-// I have to declare these vars globally since I act on them 
-// later , 
 
-//var win2 ;
-//var RawJson ;
-var aButton ;
-var self ; 
-var label ;
-var labelData ;
-
-var  LoadedText  ;
-	//var RawJson ; 
-	//var win2 ; 
-	//var SampleDL = require('text/SampleDL');
 function ApplicationTabGroup(Window) {
 	// what Templates does is return a nicely formated UI element 
+
+
+
+
 	Templates = require ( 'CoreFiles/Templates');
-	LoadedText = Templates('Label');
+var 	LoadedText = Templates('Label');
 	var JsonProper =  Templates('SCView');
-	labelData = Templates('Label');
+var	labelData = Templates('Label');
 	labelData.text = ' Waiting for Data ';
 var	JSONTe = Templates('Label');
 	var viewContainer = Templates('SCview');
 	var selfd = Ti.UI.createTabGroup();
 
-	 self = new Window(L('Player'));
+var	 self = new Window(L('Player'));
 var	 RawJson = new Window(L('Raw Json'));
 var		win2 = new Window(L('Tech Info'));
 	
@@ -57,7 +48,7 @@ var		win2 = new Window(L('Tech Info'));
 	selfd.addTab(tab2);
 	selfd.addTab(tab3);
 
-	 label = Ti.UI.createTextField({
+var	 label = Ti.UI.createTextField({
 		color:'#000000',
 		value : 'Search Here',
 
@@ -70,7 +61,7 @@ var		win2 = new Window(L('Tech Info'));
 
 	});
 
-	 aButton = Ti.UI.createButton({
+var	 aButton = Ti.UI.createButton({
 		title : 'Search',
 		height :'auto' ,
 		width : 'auto',

@@ -35,7 +35,7 @@ var		win2 = new Window(L('Tech Info'));
 		icon: 'text/content.png',
 		window: RawJson
 	});
-		
+	
 	//var better = Ti.UI.createScrollableView();
 	
 	win2.containingTab = tab2;
@@ -125,6 +125,13 @@ var  LoadedText  = Templates('Label');
 	JSonProper.visible = false ;
 	RawJson.add(JSonProper);
 	RawJson.add(viewContainer)	;
+
+	if( Ti.Platform.osname == 'android'){
+		// don't know how , don't care
+		
+		//	AddMenu = require('CoreFiles/AddMenu');
+	//var Context = AddMenu();
+	}
 	return selfd;
 };
 

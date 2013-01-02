@@ -1,6 +1,6 @@
 //function AJ (trackL,UiStuff){
 function AJ (trackL,UiStuff){
-	alert(trackL);
+//	alert(trackL);
 	if ( trackL == null){
 		alert('No Data ');
 		
@@ -19,8 +19,8 @@ var xhr = Ti.Network.createHTTPClient({
     
         
         Ti.API.debug(this.responseText);
-        alert('success');
-    	alert(this.responseText );
+        //alert('success');
+    	//alert(this.responseText );
     	var data = eval('('+ this.responseText +')');
     	DataFix = require('CoreFiles/DataFix');
     	data =  DataFix(data,true);

@@ -8,9 +8,9 @@ function MusicPlayer (Song,SongMeta,JM){
 	
 	if( Ti.Platform.osname == 'android'){
  	
-	var	RowPlay = Ti.Media.createAudioPlayer({url : Song});
+	var	RowPlay = Ti.Media.createAudioPlayer({url : Song, allowBackground: true});
 	//RowPlay.STATE_PLAYING
-		RowPlay.allowBackground = true ; 
+	//	RowPlay.allowBackground = true ; 
 
 }
 	 
@@ -52,8 +52,8 @@ function MusicPlayer (Song,SongMeta,JM){
     }
     	else
     	{
-    	
-    	  	var SGU =  'http://www.jamendo.com/en/'; 
+    		//	alert('No meta');
+    	  	var SGU =  "http://www.jamendo.com/en/"; 
     
     }
     //	SGu = SGu + "";

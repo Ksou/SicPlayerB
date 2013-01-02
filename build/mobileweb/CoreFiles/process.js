@@ -30,8 +30,6 @@ table.addEventListener('click', function(e){
 
 if(e.index == (table.data[0].rows.length - 1))
 {
-//alert(" Going Back ") ;
-//BackE = require('ui/common/ApplicationTabGroup');
 
 BackE (UiStuff,table);
 //BackE(label,aButton);
@@ -42,7 +40,7 @@ else
 JM = false ; 
 if(data[e.index].color != 'blue')
 {
-	alert('hmm');
+//	alert('hmm');
 var Closer = data[e.index].permalink_url; 
 var Sounder = Closer + '/'  + "/download.mp3" ;
 }
@@ -52,7 +50,7 @@ else
 	 JM = true ; 
 	 var 
 Sounder ='http://storage-new.newjamendo.com/download/track/'+data[e.index].id+'/mp32';
-	alert(Sounder);
+	//alert(Sounder);
 }
 if(data[e.index].downloadable == false){
 	alert(" Sorry we can't play :" + data[e.index] .title);
@@ -68,7 +66,7 @@ MusicPlayer(Sounder,data[e.index],JM);
 	
 	UiStuff.self.remove(UiStuff.label);
 	UiStuff.self.remove(UiStuff.aButton);
-	
+
 
 
 // NOTE for all who view this code, I didn't want to have to 

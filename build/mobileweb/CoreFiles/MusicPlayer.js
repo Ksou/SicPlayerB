@@ -52,8 +52,8 @@ function MusicPlayer (Song,SongMeta,JM){
     }
     	else
     	{
-    	
-    	  	var SGU =  'http://www.jamendo.com/en/'; 
+    		//	alert('No meta');
+    	  	var SGU =  "http://www.jamendo.com/en/"; 
     
     }
     //	SGu = SGu + "";

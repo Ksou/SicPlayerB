@@ -34,6 +34,22 @@ if (Ti.version < 1.8 ) {
 	else {
 		Window = require('ui/handheld/ApplicationWindow');
 	}
+	/*
+	if( Ti.Platform.osname == 'android'){
+		activity = Ti.Android.currentActivity;
+activity.onCreateOptionsMenu = function(e) {
+    var menu = e.menu;
+    var menuItem = menu.add({ title: "Item 1" });
+    menuItem.setIcon("text/email.png");
+    menuItem.addEventListener("click", function(e) {
+    	    var email = 'keith@beatquestgame.com' ;
+               Titanium.Platform.openURL(email);
+        // do something when the menu item is tapped
+    });
+};
+	}
+*/	
+	
 	
 	var ApplicationTabGroup = require('ui/common/ApplicationTabGroup');
 	new ApplicationTabGroup(Window).open();

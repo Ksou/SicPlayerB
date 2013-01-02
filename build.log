@@ -5,11 +5,12 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.006744 seconds on emulator to get ready
+[DEBUG] waited 0.008737 seconds on emulator to get ready
 [DEBUG] com.BeatQuest.SicEX installed? True
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /home/keith/Titanium_Studio_Workspace/SICExp/Resources/CoreFiles/process.js => /home/keith/Titanium_Studio_Workspace/SICExp/build/android/bin/assets/Resources/CoreFiles/process.js
+[TRACE] COPYING MODIFIED FILE: /home/keith/Titanium_Studio_Workspace/SICExp/Resources/CoreFiles/MusicPlayer.js => /home/keith/Titanium_Studio_Workspace/SICExp/build/android/bin/assets/Resources/CoreFiles/MusicPlayer.js
+[TRACE] COPYING MODIFIED FILE: /home/keith/Titanium_Studio_Workspace/SICExp/Resources/ui/common/ApplicationTabGroup.js => /home/keith/Titanium_Studio_Workspace/SICExp/build/android/bin/assets/Resources/ui/common/ApplicationTabGroup.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [DEBUG] copying app icon: /home/keith/Titanium_Studio_Workspace/SICExp/build/android/bin/assets/Resources/appicon.png
@@ -45,6 +46,7 @@ Logfile initialized
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: /home/keith/Titanium_Studio_Workspace/SICExp/build/android/bin/app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/CoreFiles/AJ.js
+[DEBUG] from resource zip => assets/Resources/CoreFiles/AddMenu.js
 [DEBUG] from resource zip => assets/Resources/CoreFiles/AltJson.js
 [DEBUG] from resource zip => assets/Resources/CoreFiles/DataFix.js
 [DEBUG] from resource zip => assets/Resources/CoreFiles/LoadJson.js
@@ -58,8 +60,10 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/text/About.txt
 [DEBUG] from resource zip => assets/Resources/text/SCid.txt
 [DEBUG] from resource zip => assets/Resources/text/content.png
+[DEBUG] from resource zip => assets/Resources/text/email.png
 [DEBUG] from resource zip => assets/Resources/text/headphones.png
 [DEBUG] from resource zip => assets/Resources/text/pc.png
+[DEBUG] from resource zip => assets/Resources/text/site.png
 [DEBUG] from resource zip => assets/Resources/text/vOFF.png
 [DEBUG] from resource zip => assets/Resources/text/vON.png
 [DEBUG] from resource zip => assets/Resources/ui/common/ApplicationTabGroup.js
@@ -115,6 +119,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.008672 seconds on emulator to get ready
+[DEBUG] waited 0.004367 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

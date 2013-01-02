@@ -1,7 +1,7 @@
 /**
  * @author Keith
  */ //var old ; 
-function MusicPlayer (Song,SongMeta){	
+function MusicPlayer (Song,SongMeta,JM){	
 	
 	
 	
@@ -10,6 +10,8 @@ function MusicPlayer (Song,SongMeta){
  	
 	var	RowPlay = Ti.Media.createAudioPlayer({url : Song});
 	//RowPlay.STATE_PLAYING
+		RowPlay.allowBackground = true ; 
+
 }
 	 
 	  var SongInfo = Ti.UI.createAlertDialog({
@@ -19,7 +21,9 @@ function MusicPlayer (Song,SongMeta){
    // I can't stop the dialog from going away when a button is pressed
    // So instead
      buttonNames: ['Artist Page', 'Close'],
-    message: 'By : '+ SongMeta.user.username ,
+   
+    //message: 'By : '+ SongMeta.user.username ,
+   
     title: SongMeta.title 
   });
 //  SongInfo.setPersistent(true);
@@ -38,7 +42,20 @@ function MusicPlayer (Song,SongMeta){
     RowPlay.stop();
     RowPlay.release();
     }
-    	var SGu = SongMeta.user.permalink_url ;
+    
+    if(SongMeta.user)
+   {
+   	
+   	var SGu = SongMeta.user.permalink_url ;
+ //http:\/\/www.jamendo.com\/en\/artist\/
+    	
+    }
+    	else
+    	{
+    	
+    	  	var SGU =  'http://www.jamendo.com/en/'; 
+    
+    }
     //	SGu = SGu + "";
     	//alert(SGu);
     	Titanium.Platform.openURL(SGu);

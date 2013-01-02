@@ -1,7 +1,11 @@
 /**
  * @author Keith
  */
-function LoadJson (trackL,self,labelData,JSONTe,label,aButton)
+
+
+
+
+function LoadJson (trackL,UiStuff,altData)
 {
 	
 	//labelData.text = " Yo";
@@ -18,14 +22,19 @@ var SCid = TextLoad('text/SCid.txt');
 
     dlXhr.onload = function(){
 	//	var data = JSON.parse(this.responseData).data; 
+	//alert(this.responseText);
 	Process = require('CoreFiles/process');
-	labelData.text = this.responseText ;
+	UiStuff.labelData.text = this.responseText ;
 	var data = eval('('+ this.responseText +')');
+	DataFix = require('CoreFiles/DataFix');
+    data =  DataFix(data,false);
 	json2txt = require('CoreFiles/json2txt');
-	JSONTe.text =  json2txt(data,'') ;
-	
-	
-	Process(data,self,label,aButton);
+	UiStuff.JSONTe.text =  json2txt(data,'') ;
+
+	var dataPro = data.concat(altData);
+	// remove elements we don't need ;
+	//UiStuff= [UiStuff.self,UiStuff.label,UiStuff.aButton];
+	Process(dataPro,UiStuff);
     }
 
     dlXhr.open('GET',urlPrime);

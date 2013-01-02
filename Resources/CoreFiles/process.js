@@ -2,15 +2,15 @@
  * @author Keith
  */
 
-
-function Process(data,self,label,aButton){
+var JM ;
+function Process(data,UiStuff){
 
 //labelData.text = da ;
-
-DataFix = require('CoreFiles/DataFix');
+// self , label , aButton 
+//DataFix = require('CoreFiles/DataFix');
 // For the Json Array I add properties 
 // in DataFix, this allows me to force rows to have 
-data =  DataFix(data);
+//data =  DataFix(data);
 var table = Titanium.UI.createTableView({
 
   data: data,
@@ -30,19 +30,28 @@ table.addEventListener('click', function(e){
 
 if(e.index == (table.data[0].rows.length - 1))
 {
-//alert(" Going Back ") ;
-//BackE = require('ui/common/ApplicationTabGroup');
 
-BackE (self,label,aButton,table);
+BackE (UiStuff,table);
 //BackE(label,aButton);
 //function(){
 }	
 else
 {
+JM = false ; 
+if(data[e.index].color != 'blue')
+{
+	alert('hmm');
 var Closer = data[e.index].permalink_url; 
-
 var Sounder = Closer + '/'  + "/download.mp3" ;
+}
+else
 
+{
+	 JM = true ; 
+	 var 
+Sounder ='http://storage-new.newjamendo.com/download/track/'+data[e.index].id+'/mp32';
+	alert(Sounder);
+}
 if(data[e.index].downloadable == false){
 	alert(" Sorry we can't play :" + data[e.index] .title);
 }
@@ -50,13 +59,13 @@ else
 {
 	//alert('Trying to Play '+ data[e.index] .title );
 MusicPlayer = require('CoreFiles/MusicPlayer');
-MusicPlayer(Sounder,data[e.index]); 
+MusicPlayer(Sounder,data[e.index],JM); 
 }
 
 }});
 	
-	self.remove(label);
-	self.remove(aButton);
+	UiStuff.self.remove(UiStuff.label);
+	UiStuff.self.remove(UiStuff.aButton);
 	
 
 
@@ -67,15 +76,15 @@ MusicPlayer(Sounder,data[e.index]);
 	//}
 	//return old ; 
 	
-	self.add(table);
+	UiStuff.self.add(table);
 	//alert(data.type);
 //	alert(data[1]);
 }
-function BackE (self,label,aButton,table){
-self.remove(table);
+function BackE (UiStuff,table){
+UiStuff.self.remove(table);
 //	self.remove(self.children[0]);
-	self.add(label);
-	self.add(aButton);
+	UiStuff.self.add(UiStuff.label);
+	UiStuff.self.add(UiStuff.aButton);
 	//}
 	
 }

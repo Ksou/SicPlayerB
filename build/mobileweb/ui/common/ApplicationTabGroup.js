@@ -1,40 +1,29 @@
-// I have to declare these vars globally since I act on them 
-// later , 
-
-//var win2 ;
-//var RawJson ;
-var aButton ;
-var self ; 
-var label ;
-var labelData ;
-
-var  LoadedText  ;
-	//var RawJson ; 
-	//var win2 ; 
-	//var SampleDL = require('text/SampleDL');
 function ApplicationTabGroup(Window) {
 	// what Templates does is return a nicely formated UI element 
 	Templates = require ( 'CoreFiles/Templates');
-	LoadedText = Templates('Label');
-	var JsonProper =  Templates('SCView');
-	labelData = Templates('Label');
-	labelData.text = ' Waiting for Data ';
-var	JSONTe = Templates('Label');
+var UiStuff = ['self','labelData','JSONTe','label','aButton'];
+// all I'm doing here is organizing our objects in an Array , we send this all over so...
+var 	LoadedText = Templates('Label');
+var JsonProper =  Templates('SCView');
+	UiStuff.labelData = Templates('Label');
+	UiStuff.labelData.text = ' Waiting for Data ';
+	UiStuff.JSONTe = Templates('Label');
 	var viewContainer = Templates('SCview');
-	var selfd = Ti.UI.createTabGroup();
+	
 
-	 self = new Window(L('Player'));
+	 UiStuff.self = new Window(L('Player'));
 var	 RawJson = new Window(L('Raw Json'));
 var		win2 = new Window(L('Tech Info'));
-	
+//var UiStuff = [self,labelData,JSONTe,label,aButton];
+	var selfd = Ti.UI.createTabGroup();
 	var tab1 = Ti.UI.createTab({
 		title: ('Player'),
 		icon : '/text/headphones.png',
 		//icon: '/images/KS_nav_ui.png',
-		window: self
+		window: UiStuff.self
 	});
-	
-	self.containingTab = tab1;
+	//UiStuff.s
+	UiStuff.self.containingTab = tab1;
 	
 	var tab2 = Ti.UI.createTab({
 		title: ('Tech Info '),
@@ -47,7 +36,7 @@ var		win2 = new Window(L('Tech Info'));
 		window: RawJson
 	});
 		
-	var better = Ti.UI.createScrollableView();
+	//var better = Ti.UI.createScrollableView();
 	
 	win2.containingTab = tab2;
 	RawJson.containingTab = tab3 ;
@@ -57,32 +46,36 @@ var		win2 = new Window(L('Tech Info'));
 	selfd.addTab(tab2);
 	selfd.addTab(tab3);
 
-	 label = Ti.UI.createTextField({
+	UiStuff.label = Ti.UI.createTextField({
 		color:'#000000',
 		value : 'Search Here',
 
 		height:'auto',
 		width:'auto'
 	});
-	self.add(label);
+	UiStuff.self.add(UiStuff.label);
 
-	label.addEventListener('click', function(e) {
+	UiStuff.label.addEventListener('click', function(e) {
 
 	});
 
-	 aButton = Ti.UI.createButton({
+	UiStuff.aButton = Ti.UI.createButton({
 		title : 'Search',
 		height :'auto' ,
 		width : 'auto',
-		top : label.top + 20 
+		top : UiStuff.label.top + 20 
 	//	top : 'auto'*0.5,
 		//left : 100
 	});
 	
 	// Listen for click events.
-	aButton.addEventListener('click', function() {
-	LoadJson = require('CoreFiles/LoadJson');
-	LoadJson (label.value,self,labelData,JSONTe,label,aButton);
+	UiStuff.aButton.addEventListener('click', function() {
+	AJ = require('CoreFiles/AJ');
+	AJ (UiStuff.label.value,UiStuff);
+	
+	
+	
+	
 
 	});
 
@@ -112,12 +105,12 @@ var		win2 = new Window(L('Tech Info'));
 	
 	
 	});
-	JSonProper.add(JSONTe);
-	labelData.horizontalWrap = true ;
+	JSonProper.add(UiStuff.JSONTe);
+	UiStuff.labelData.horizontalWrap = true ;
 	
-	viewContainer.add(labelData);
+	viewContainer.add(UiStuff.labelData);
 	
-	self.add(aButton);
+	UiStuff.self.add(UiStuff.aButton);
 	
 var  LoadedText  = Templates('Label'); 
 
@@ -126,7 +119,7 @@ var  LoadedText  = Templates('Label');
 	LoadedText.text = TextLoad('text/About.txt');
 	//LoadedText.
 	var LoadScroll =  Templates('SCView'); 
-
+	
 	LoadScroll.add(LoadedText);
 	win2.add(LoadScroll);
 	JSonProper.visible = false ;

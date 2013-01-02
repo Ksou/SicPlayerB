@@ -1,11 +1,7 @@
 /**
  * @author Keith
  */
-
-
-
-
-function LoadJson (trackL,UiStuff,altData)
+function AJ (trackL,UiStuff)
 {
 	
 	//labelData.text = " Yo";
@@ -22,19 +18,15 @@ var SCid = TextLoad('text/SCid.txt');
 
     dlXhr.onload = function(){
 	//	var data = JSON.parse(this.responseData).data; 
-	//alert(this.responseText);
+	alert(this.responseText);
 	Process = require('CoreFiles/process');
 	UiStuff.labelData.text = this.responseText ;
 	var data = eval('('+ this.responseText +')');
-	DataFix = require('CoreFiles/DataFix');
-    data =  DataFix(data,false);
 	json2txt = require('CoreFiles/json2txt');
 	UiStuff.JSONTe.text =  json2txt(data,'') ;
-
-	var dataPro = data.concat(altData);
 	// remove elements we don't need ;
 	//UiStuff= [UiStuff.self,UiStuff.label,UiStuff.aButton];
-	Process(dataPro,UiStuff);
+	Process(data,UiStuff);
     }
 
     dlXhr.open('GET',urlPrime);
@@ -47,4 +39,4 @@ var SCid = TextLoad('text/SCid.txt');
 	}	
 }
 
-module.exports = LoadJson;
+module.exports = AJ;

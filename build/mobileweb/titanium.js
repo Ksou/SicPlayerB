@@ -1,6 +1,6 @@
 /**
  * WARNING: this is generated code and will be lost if changes are made.
- * This generated source code is Copyright (c) 2010-2012 by Appcelerator, Inc. All Rights Reserved.
+ * This generated source code is Copyright (c) 2010-2013 by Appcelerator, Inc. All Rights Reserved.
  */
 var require = {
 	app: {
@@ -9,8 +9,8 @@ var require = {
 		deployType: "development",
 		description: "not specified",
 		guid: "f1699f52-e95a-411e-8464-bb7f6b72137c",
-		id: "com.BeatQuest.SicPlayerB",
-		name: "SicPlayerB",
+		id: "com.BeatQuest.SicEX",
+		name: "SicEX",
 		names: {},
 		publisher: "keith",
 		url: "http://beatquestgame.com/",
@@ -45,8 +45,8 @@ var require = {
 	locales: ["en","ja"],
 	packages: [{"name":"Ti","location":"./titanium","main":"./Ti"}],
 	project: {
-		id: "com.BeatQuest.SicPlayerB",
-		name: "SicPlayerB"
+		id: "com.BeatQuest.SicEX",
+		name: "SicEX"
 	},
 	ti: {
 		buildHash: "a5894b3",

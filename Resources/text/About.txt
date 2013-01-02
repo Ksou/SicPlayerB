@@ -1,4 +1,17 @@
 This is a very basic SoundCloud song player . 
 The way this app works is first , we create a HTTP client, assign it as a var , and with this var we run a .open function with the arguments  ('GET', and the request URL  ) . Then we run a send function . Incase we have any problems with our request we have an .onerror function that displays an alert saying we can't establish a connection . 
 
-After that 
+After that I run an eval on the response data , turning it into a usable array . This works best with 
+JSON data . Originally I attempted to use XML data , but this proved problematic . Using the returned JSON data
+we create a table view . But before so we run though the Datafix function . What this does is alter the original 
+data array to add whatever properties we need . Android does not allow changes to the table after we render it 
+so any changes from the default row type need to be made before the table is rendered . 
+
+Alterations to the regular row format include color , and fontsize . 
+
+Once we have nicely formated rows we add a bottom row for Back , and if the user decides to go back to the search screen 
+we remove the table view and re-add the Button and search text field. This is accomplished via passing around varibles for the button and search text field .
+
+Using the returned data inside the array we determine the download URL of the MP3 files we want to play back . 
+
+The experimental branch supports Jamendo as well as soundcloud .
